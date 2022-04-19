@@ -1,0 +1,30 @@
+---
+name: Sync labels
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/labels.yml
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  labels:
+    name: Sync labels
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download latest labels definitions
+        run: |
+          curl -s --retry 5 \
+            "https://raw.githubusercontent.com/node-red-contrib-themes/workflows/master/.github/labels.yml" \
+            > labels.yml
+      - name: Run Label Syncer
+        uses: micnncim/action-label-syncer@v1.3.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          manifest: labels.yml
