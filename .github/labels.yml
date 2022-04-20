@@ -26,9 +26,9 @@
 - name: "invalid"
   color: e4e669
   description: "This doesn't seem right"
-- name: "javascript"
+- name: "npm"
   color: 168700
-  description: "Pull requests that update Javascript code"
+  description: "Pull requests that update npm code"
 - name: "question"
   color: d876e3
   description: "Further information is requested"
