@@ -33,9 +33,15 @@
 - name: "breaking change"
   color: d73a4a
   description: "A breaking change for existing users"
+- name: "bugfix"
+  color: d73a4a
+  description: "Fix for something that isn't working"
 - name: "new theme"
   color: a2eeef
   description: "New theme"
+- name: "theme request"
+  color: a2eeef
+  description: "Theme request"
 
 - name: upstream
   color: ffffff
