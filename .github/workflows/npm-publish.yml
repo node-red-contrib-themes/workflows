@@ -1,5 +1,5 @@
 ---
-name: NPM Publish
+name: "NPM Publish"
 
 on:
   workflow_call:
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: '14'
+          node-version: "14"
 
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v1.4.3

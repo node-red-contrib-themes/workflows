@@ -1,5 +1,5 @@
 ---
-name: 'Lock Threads'
+name: "Lock Threads"
 
 on:
   schedule:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   lock:
-    name: Lock closed issues and PRs
+    name: "Lock closed issues and PRs"
     runs-on: ubuntu-latest
     steps:
       - uses: dessant/lock-threads@v3.0.0
