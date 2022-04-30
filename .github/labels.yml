@@ -42,6 +42,9 @@
 - name: "theme request"
   color: a2eeef
   description: "Theme request"
+- name: "theme updates"
+  color: a2eeef
+  description: "Theme updates"
 
 - name: upstream
   color: ffffff
